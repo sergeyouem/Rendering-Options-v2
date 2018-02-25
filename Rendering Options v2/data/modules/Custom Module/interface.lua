@@ -30,6 +30,7 @@ selected_tab = globalPropertyi("pnv/ro/selected_tab",false)
 ro_refs_values=globalPropertyfa ( "pnv/ro/ro_refs_values", false )
 openmainwindow = sasl.findCommand("pnv/ro/popup")
 sizetext=20
+sizetext2=16
 lengthtext = 0
 sizetextset=false
 page_cloud=1
@@ -572,103 +573,110 @@ function draw()
 			sasl.gl.drawText ( MainFont , 735 , 75 , round(get(bloom_far_ref),0), 16 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
 		elseif get(selected_tab)==8 then
 			sasl.gl.drawRectangle ( 17 , 110 , 235 , 5 , {0.12,0.45,0.75,get(ro_sett,9)} )
-			sasl.gl.drawText ( MainFont , 320 , 400 , langfile_sett[111] , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 270 , 370 , langfile_sett[112]..":  ", sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 310 , 410 , langfile_sett[111] , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 270 , 390 , langfile_sett[112]..":  ", sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
 			if get(ro_sett,2)==0 then
-				sasl.gl.drawText ( MainFont , 580 , 370 , "None", sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+				sasl.gl.drawText ( MainFont , 520 , 390 , "None", sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
 			else
-				sasl.gl.drawText ( MainFont , 580 , 370 , get(ro_sett,2), sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+				sasl.gl.drawText ( MainFont , 520 , 390 , get(ro_sett,2), sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
 			end
-			sasl.gl.drawText ( MainFont , 270 , 340 , langfile_sett[113] , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 270 , 370 , langfile_sett[113] , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
 			--SAVE
-			sasl.gl.drawTexture(get(gray_sq_pic) , 370 , 335 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 370 , 335 , 25 , 25, {1 , 1 , 1 , visib_blue[1]})
-			sasl.gl.drawText ( MainFont , 375 , 340 , 1 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawTexture(get(gray_sq_pic) , 410 , 335 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 410 , 335 , 25 , 25, {1 , 1 , 1 , visib_blue[2]})
-			sasl.gl.drawText ( MainFont , 415 , 340 , 2 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawTexture(get(gray_sq_pic) , 450 , 335 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 450 , 335 , 25 , 25, {1 , 1 , 1 , visib_blue[3]})
-			sasl.gl.drawText ( MainFont , 455 , 340 , 3 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawTexture(get(gray_sq_pic) , 490 , 335 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 490 , 335 , 25 , 25, {1 , 1 , 1 , visib_blue[4]})
-			sasl.gl.drawText ( MainFont , 495 , 340 , 4 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawTexture(get(gray_sq_pic) , 530 , 335 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 530 , 335 , 25 , 25, {1 , 1 , 1 , visib_blue[5]})
-			sasl.gl.drawText ( MainFont , 535 , 340 , 5 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawTexture(get(gray_sq_pic) , 570 , 335 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 570 , 335 , 25 , 25, {1 , 1 , 1 , visib_blue[6]})
-			sasl.gl.drawText ( MainFont , 575 , 340 , 6 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 330 , 365 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 330 , 365 , 20 , 20, {1 , 1 , 1 , visib_blue[1]})
+			sasl.gl.drawText ( MainFont , 335 , 369 , 1 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 360 , 365 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 360 , 365 , 20 , 20, {1 , 1 , 1 , visib_blue[2]})
+			sasl.gl.drawText ( MainFont , 365 , 369 , 2 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 390 , 365 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 390 , 365 , 20 , 20, {1 , 1 , 1 , visib_blue[3]})
+			sasl.gl.drawText ( MainFont , 395 , 369 , 3 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 420 , 365 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 420 , 365 , 20 , 20, {1 , 1 , 1 , visib_blue[4]})
+			sasl.gl.drawText ( MainFont , 425 , 369 , 4 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 450 , 365 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 450 , 365 , 20 , 20, {1 , 1 , 1 , visib_blue[5]})
+			sasl.gl.drawText ( MainFont , 455 , 369 , 5 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 480 , 365 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 480 , 365 , 20 , 20, {1 , 1 , 1 , visib_blue[6]})
+			sasl.gl.drawText ( MainFont , 485 , 369 , 6 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
 			--LOAD
-			sasl.gl.drawText ( MainFont , 270 , 310 , langfile_sett[114] , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawTexture(get(gray_sq_pic) , 370 , 305 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 370 , 305 , 25 , 25, {1 , 1 , 1 , visib_blue[7]})
-			sasl.gl.drawText ( MainFont , 375 , 310 , 1 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawTexture(get(gray_sq_pic) , 410 , 305 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 410 , 305 , 25 , 25, {1 , 1 , 1 , visib_blue[8]})
-			sasl.gl.drawText ( MainFont , 415 , 310 , 2 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawTexture(get(gray_sq_pic) , 450 , 305 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 450 , 305 , 25 , 25, {1 , 1 , 1 , visib_blue[9]})
-			sasl.gl.drawText ( MainFont , 455 , 310 , 3 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawTexture(get(gray_sq_pic) , 490 , 305 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 490 , 305 , 25 , 25, {1 , 1 , 1 , visib_blue[10]})
-			sasl.gl.drawText ( MainFont , 495 , 310 , 4 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawTexture(get(gray_sq_pic) , 530 , 305 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 530 , 305 , 25 , 25, {1 , 1 , 1 , visib_blue[11]})
-			sasl.gl.drawText ( MainFont , 535 , 310 , 5 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawTexture(get(gray_sq_pic) , 570 , 305 , 25 , 25, {1 , 1 , 1 , get(ro_sett,9)})
-			sasl.gl.drawTexture(get(blue_sq_pic) , 570 , 305 , 25 , 25, {1 , 1 , 1 , visib_blue[12]})
-			sasl.gl.drawText ( MainFont , 575 , 310 , 6 , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 270 , 280 , langfile_sett[115]..": " , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 440 , 280 , round(get(ro_sett,9)*100,0) .." %", sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 570 , 280 , langfile_sett[126]..": " , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 710 , 280 , round(get(ro_sett,11),0) .." %", sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 320 , 250 , langfile_sett[116] , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 620 , 250 , langfile_sett[127] , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawWideLine ( 265 , 230 , 787 , 230 , 2 , {0.8 , 0.8 , 0.8 , get(ro_sett,9) } )
-			sasl.gl.drawWideLine ( 265 , 110 , 787 , 110 , 2 , {0.8 , 0.8 , 0.8 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 270 , 210 , langfile_sett[117] , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 270 , 180 , langfile_sett[118]..":  ", 16 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 620 , 180 , get(ro_sett,6), 16 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 270 , 150 , langfile_sett[119]..":  ", 16 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 620 , 150 , get(ro_sett,7), 16 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 270 , 120 , langfile_sett[120]..":  ", 16 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 620 , 120 , get(ro_sett,8), 16 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 320 , 85 , langfile_sett[121], sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
-			sasl.gl.drawText ( MainFont , 270 , 55 , langfile_sett[122]..":  ", sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 270 , 345 , langfile_sett[114] , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 330 , 340 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 330 , 340 , 20 , 20, {1 , 1 , 1 , visib_blue[7]})
+			sasl.gl.drawText ( MainFont , 335 , 344 , 1 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 360 , 340 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 360 , 340 , 20 , 20, {1 , 1 , 1 , visib_blue[8]})
+			sasl.gl.drawText ( MainFont , 365 , 344 , 2 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 390 , 340 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 390 , 340 , 20 , 20, {1 , 1 , 1 , visib_blue[9]})
+			sasl.gl.drawText ( MainFont , 395 , 344 , 3 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 420 , 340 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 420 , 340 , 20 , 20, {1 , 1 , 1 , visib_blue[10]})
+			sasl.gl.drawText ( MainFont , 425 , 344 , 4 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 450 , 340 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 450 , 340 , 20 , 20, {1 , 1 , 1 , visib_blue[11]})
+			sasl.gl.drawText ( MainFont , 455 , 344 , 5 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawTexture(get(gray_sq_pic) , 480 , 340 , 20 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+			sasl.gl.drawTexture(get(blue_sq_pic) , 480 , 340 , 20 , 20, {1 , 1 , 1 , visib_blue[12]})
+			sasl.gl.drawText ( MainFont , 485 , 344 , 6 , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			---
+			sasl.gl.drawText ( MainFont , 270 , 320 , langfile_sett[115]..": " , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 400 , 320 , round(get(ro_sett,9)*100,0) .." %", sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 270 , 300 , langfile_sett[126]..": " , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 410 , 300 , round(get(ro_sett,11),0) .." %", sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 310 , 280 , langfile_sett[127] , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 310 , 260 , langfile_sett[116] , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 610 , 260 , langfile_sett[128] , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawWideLine ( 265 , 250 , 787 , 250 , 2 , {0.8 , 0.8 , 0.8 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 270 , 230 , langfile_sett[117] , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 270 , 210 , langfile_sett[118]..":  ", sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 620 , 210 , get(ro_sett,6), sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 270 , 190 , langfile_sett[119]..":  ", sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 620 , 190 , get(ro_sett,7), sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 270 , 170 , langfile_sett[120]..":  ", sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 620 , 170 , get(ro_sett,8), sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawWideLine ( 265 , 160 , 787 , 160 , 2 , {0.8 , 0.8 , 0.8 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 310 , 140 , langfile_sett[121], sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 270 , 100 , langfile_sett[122]..":  ", sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
 			if get(ro_sett,5)==1 then
-				sasl.gl.drawText ( MainFont , 440 , 55 , "English", sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+				sasl.gl.drawText ( MainFont , 410 , 100 , "English", sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
 			elseif get(ro_sett,5)==2 then
-				sasl.gl.drawText ( MainFont , 440 , 55 , "Russian", sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+				sasl.gl.drawText ( MainFont , 410 , 100 , "Russian", sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
 			end
-			sasl.gl.drawText ( MainFont , 620 , 55 , langfile_sett[125] , sizetext , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
+			sasl.gl.drawText ( MainFont , 310 , 120 , langfile_sett[125] , sizetext2 , false , false , TEXT_ALIGN_LEFT , {1 , 1 , 1 , get(ro_sett,9) } )
 			if scrollwheel>0 then
 				sasl.gl.drawTexturePart(get(mousepointer) , sasl.getCSMouseXPos()-15 , sasl.getCSMouseYPos() , 45 , 45, 0, 384 ,64,64,{1,1,0 , get(ro_sett,9) })
 			end
 			if get(ro_sett,1)==0 then
-				sasl.gl.drawTexture(get(off_pic) , 270 , 397 , 40 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+				sasl.gl.drawTexture(get(off_pic) , 270 , 408 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9)})
 			else
-				sasl.gl.drawTexture(get(on_pic) , 270 , 397 , 40 , 20, {1 , 1 , 1 , get(ro_sett,9) })
+				sasl.gl.drawTexture(get(on_pic) , 270 , 408 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9) })
 			end
 			if get(ro_sett,3)==0 then
-				sasl.gl.drawTexture(get(off_pic) , 270 , 247 , 40 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+				sasl.gl.drawTexture(get(off_pic) , 270 , 258 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9)})
 			else
-				sasl.gl.drawTexture(get(on_pic) , 270 , 247 , 40 , 20, {1 , 1 , 1 , get(ro_sett,9) })
+				sasl.gl.drawTexture(get(on_pic) , 270 , 258 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9) })
 			end
 			if get(ro_sett,4)==0 then
-				sasl.gl.drawTexture(get(off_pic) , 270 , 82 , 40 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+				sasl.gl.drawTexture(get(off_pic) , 270 , 138 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9)})
 			else
-				sasl.gl.drawTexture(get(on_pic) , 270 , 82 , 40 , 20, {1 , 1 , 1 , get(ro_sett,9) })
+				sasl.gl.drawTexture(get(on_pic) , 270 , 138 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9) })
 			end
 			if get(ro_sett,10)==0 then
-				sasl.gl.drawTexture(get(off_pic) , 570 , 52 , 40 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+				sasl.gl.drawTexture(get(off_pic) , 270 , 118 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9)})
 			else
-				sasl.gl.drawTexture(get(on_pic) , 570 , 52 , 40 , 20, {1 , 1 , 1 , get(ro_sett,9) })
+				sasl.gl.drawTexture(get(on_pic) , 270 , 118 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9) })
 			end
 			if get(ro_sett,12)==0 then
-				sasl.gl.drawTexture(get(off_pic) , 570 , 247 , 40 , 20, {1 , 1 , 1 , get(ro_sett,9)})
+				sasl.gl.drawTexture(get(off_pic) , 270 , 278 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9)})
 			else
-				sasl.gl.drawTexture(get(on_pic) , 570 , 247 , 40 , 20, {1 , 1 , 1 , get(ro_sett,9) })
+				sasl.gl.drawTexture(get(on_pic) , 270 , 278 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9) })
+			end
+			if get(ro_sett,13)==0 then
+				sasl.gl.drawTexture(get(off_pic) , 570 , 258 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9)})
+			else
+				sasl.gl.drawTexture(get(on_pic) , 570 , 258 , 30 , 15, {1 , 1 , 1 , get(ro_sett,9) })
 			end
 		end
 	else
@@ -692,15 +700,15 @@ function savesettings()
 ---1-xEnviro enabled(0,1) , 2-load preset(0-6) , 3-autolod(0,1)
 																							----4-gray horizon(0,1) , 5-language(1-x), 6-autolod min fps, 7-autolod max fps
 																							----8-autolod timeout, 9-plugin visibility, 10-waterfix
-	local settings_table = {"xEnviroenabled","presettoload","autolodenabled","autograyhorizonenabled","language","autolodminfps","autolodmaxfps","autolodtimeout","pluginvisibility","autowaterfix","sliderheight","showslider"}
+	local settings_table = {"xEnviroenabled","presettoload","autolodenabled","autograyhorizonenabled","language","autolodminfps","autolodmaxfps","autolodtimeout","pluginvisibility","autowaterfix","sliderheight","showslider","AutoLodShowFPS"}
 	if get(ro_sett,13)==1 then
 		settingsfilepath = moduleDirectory.."\\settings and presets\\settings.txt"
 	else
 		settingsfilepath = moduleDirectory.."/settings and presets/settings.txt"
 	end
 	settingsfile = io.open(settingsfilepath, "w")
-	for ind=1,12,1 do
-		settingsfile:write(settings_table[ind].."="..get(ro_sett,ind), "\n")
+	for ind=1,13,1 do
+		settingsfile:write(settings_table[ind].."="..round(get(ro_sett,ind),2), "\n")
 	end
 	--print(langfile_sett[1])
 	settingsfile:close()
@@ -1054,15 +1062,13 @@ function onMouseMove(component, x, y, button, parentX, parentY)
 			end
 		end
 	elseif get(selected_tab)==8 then
-		if x>570 and x<600 and y>370 and y<390 then
+		if x>520 and x<565 and y>390 and y<405 then
 			scrollwheel=1
-		elseif x>435 and x<490 and y>275 and y<300 then
+		elseif x>400 and x<450 and y>300 and y<335 then
 			scrollwheel=1
-		elseif x>615 and x<655 and y>115 and y<200 then
+		elseif x>620 and x<650 and y>170 and y<225 then
 			scrollwheel=1
-		elseif x>375 and x<450 and y>50 and y<75 then
-			scrollwheel=1
-		elseif x>710 and x<760 and y>275 and y<300 then 
+		elseif x>410 and x<470 and y>100 and y<115 then 
 			scrollwheel=1
 		else
 			scrollwheel=0
@@ -1685,7 +1691,7 @@ function onMouseWheel ( component , x , y , button , parentX , parentY, value )
 			end
 		end
 	elseif get(selected_tab)==8 then
-		if x>570 and x<635 and y>370 and y<390 then
+		if x>520 and x<565 and y>390 and y<405 then
 			set(ro_sett,get(ro_sett,2)+value,2)
 			if get(ro_sett,2)<0 then
 				set(ro_sett,0,2)
@@ -1693,7 +1699,7 @@ function onMouseWheel ( component , x , y , button , parentX , parentY, value )
 				set(ro_sett,6,2)
 			end
 			savesettings()
-		elseif x>435 and x<490 and y>275 and y<300 then
+		elseif x>400 and x<450 and y>320 and y<335 then
 			set(ro_sett,get(ro_sett,9)+value*0.05,9)
 			if get(ro_sett,9)<0.1 then
 				set(ro_sett,0.1,9)
@@ -1701,7 +1707,7 @@ function onMouseWheel ( component , x , y , button , parentX , parentY, value )
 				set(ro_sett,1,9)
 			end
 			savesettings()
-		elseif x>615 and x<655 and y>171 and y<200 then
+		elseif x>620 and x<650 and y>210 and y<225 then
 			set(ro_sett,get(ro_sett,6)+value,6)
 			if get(ro_sett,6)<5 then
 				set(ro_sett,5,6)
@@ -1712,7 +1718,7 @@ function onMouseWheel ( component , x , y , button , parentX , parentY, value )
 				set(ro_sett,get(ro_sett,6)+5,7)
 			end
 			savesettings()
-		elseif x>615 and x<655 and y>141 and y<170 then
+		elseif x>620 and x<650 and y>190 and y<205 then
 			set(ro_sett,get(ro_sett,7)+value,7)
 			if get(ro_sett,7)<5 then
 				set(ro_sett,5,7)
@@ -1723,7 +1729,7 @@ function onMouseWheel ( component , x , y , button , parentX , parentY, value )
 				set(ro_sett,get(ro_sett,7)-5,6)
 			end
 			savesettings()
-		elseif x>615 and x<655 and y>115 and y<140 then
+		elseif x>620 and x<650 and y>170 and y<185 then
 			set(ro_sett,get(ro_sett,8)+value*50,8)
 			if get(ro_sett,8)<50 then
 				set(ro_sett,50,8)
@@ -1731,7 +1737,7 @@ function onMouseWheel ( component , x , y , button , parentX , parentY, value )
 				set(ro_sett,10000,8)
 			end
 			savesettings()
-		elseif x>375 and x<450 and y>50 and y<75 then
+		elseif x>410 and x<470 and y>100 and y<115 then
 			set(ro_sett,get(ro_sett,5)+value,5)
 			if get(ro_sett,5)<1 then
 				set(ro_sett,1,5)
@@ -1739,7 +1745,7 @@ function onMouseWheel ( component , x , y , button , parentX , parentY, value )
 				set(ro_sett,2,5)
 			end
 			savesettings()
-		elseif x>710 and x<760 and y>280 and y<296 then
+		elseif x>400 and x<450 and y>300 and y<315 then
 			set(ro_sett,get(ro_sett,11)+value,11)
 			slidetab.position = {get(screen_width)-10, get(screen_height)*(get(ro_sett,11)/100), 110, 35}
 			if get(ro_sett,11)<0 then
@@ -1835,52 +1841,55 @@ function onMouseDown ( component , x , y , button , parentX , parentY )
 				end
 			end
 		elseif get(selected_tab)==8 then
-			if x>370 and x<395 and y>337 and y<360 then
+			if x>330 and x<350 and y>365 and y<385 then
 				savepreset(1)
 				visib_blue[1]=1
-			elseif x>410 and x<435 and y>337 and y<360 then
+			elseif x>360 and x<380 and y>365 and y<385 then
 				savepreset(2)
 				visib_blue[2]=1
-			elseif x>450 and x<475 and y>337 and y<360 then
+			elseif x>390 and x<410 and y>365 and y<385 then
 				savepreset(3)
 				visib_blue[3]=1
-			elseif x>490 and x<515 and y>337 and y<360 then
+			elseif x>420 and x<440 and y>365 and y<385 then
 				savepreset(4)
 				visib_blue[4]=1
-			elseif x>530 and x<555 and y>337 and y<360 then
+			elseif x>450 and x<470 and y>365 and y<385 then
 				savepreset(5)
 				visib_blue[5]=1
-			elseif x>570 and x<595 and y>337 and y<360 then
+			elseif x>480 and x<500 and y>365 and y<385 then
 				savepreset(6)
 				visib_blue[6]=1
-			elseif x>370 and x<395 and y>307 and y<330 then
+			elseif x>330 and x<350 and y>340 and y<360 then
 				load_preset(1)
 				visib_blue[7]=1
-			elseif x>410 and x<435 and y>307 and y<330 then
+			elseif x>360 and x<380 and y>340 and y<360 then
 				load_preset(2)
 				visib_blue[8]=1
-			elseif x>450 and x<475 and y>307 and y<330 then
+			elseif x>390 and x<410 and y>340 and y<360 then
 				load_preset(3)
 				visib_blue[9]=1
-			elseif x>490 and x<515 and y>307 and y<330 then
+			elseif x>420 and x<440 and y>340 and y<360 then
 				load_preset(4)
 				visib_blue[10]=1
-			elseif x>530 and x<555 and y>307 and y<330 then
+			elseif x>450 and x<470 and y>340 and y<360 then
 				load_preset(5)
 				visib_blue[11]=1
-			elseif x>570 and x<595 and y>307 and y<330 then
+			elseif x>480 and x<500 and y>340 and y<360 then
 				load_preset(6)
 				visib_blue[12]=1
-			elseif x>270 and x<310 and y>247 and y<270 then
-				if get(ro_sett,3)==0 then set(ro_sett,1,3) else set(ro_sett,0,3) end
-				savesettings()
-			elseif x>570 and x<610 and y>247 and y<270 then
+			elseif x>270 and x<300 and y>280 and y<295 then
 				if get(ro_sett,12)==0 then set(ro_sett,1,12) else set(ro_sett,0,12) end
 				savesettings()
-			elseif x>270 and x<310 and y>80 and y<102 then
+			elseif x>270 and x<300 and y>260 and y<275 then
+				if get(ro_sett,3)==0 then set(ro_sett,1,3) else set(ro_sett,0,3) end
+				savesettings()
+			elseif x>570 and x<600 and y>260 and y<275 then
+				if get(ro_sett,13)==0 then set(ro_sett,1,13) else set(ro_sett,0,13) end
+				savesettings()
+			elseif x>270 and x<300 and y>140 and y<155 then
 				if get(ro_sett,4)==0 then set(ro_sett,1,4) else set(ro_sett,0,4) end
 				savesettings()
-			elseif x>570 and x<610 and y>53 and y<73 then
+			elseif x>270 and x<300 and y>120 and y<135 then
 				if get(ro_sett,10)==0 then set(ro_sett,1,10) else set(ro_sett,0,10) end
 				savesettings()
 			end

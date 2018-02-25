@@ -1,12 +1,13 @@
 xEnviroenabled=0
-presettoload=1
+presettoload=0
 autolodenabled=0
 autograyhorizonenabled=0
 language=1
-autolodminfps=30
-autolodmaxfps=40
+autolodminfps=28
+autolodmaxfps=37
 autolodtimeout=500
 pluginvisibility=1
 autowaterfix=0
 sliderheight=50
 showslider=1
+AutoLodShowFPS=0

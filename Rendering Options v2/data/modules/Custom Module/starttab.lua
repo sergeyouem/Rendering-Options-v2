@@ -4,9 +4,11 @@ ro_sett=globalPropertyfa ( "pnv/ro/ro_sett", false )
 if get(ro_sett,13)==1 then
 	MainFont = sasl.gl.loadFont ( "fonts\\DejaVuSans.ttf" )
 	defineProperty("slider_img",  sasl.gl.loadImage("pic\\slider.png"))
+	defineProperty("blue_img",  sasl.gl.loadImage("pic\\blue.png"))
 else
 	MainFont = sasl.gl.loadFont ( "fonts/DejaVuSans.ttf" )
 	defineProperty("slider_img",  sasl.gl.loadImage("pic/slider.png"))
+	defineProperty("blue_img",  sasl.gl.loadImage("pic/blue.png"))
 end
 a=0
 b=0
@@ -20,7 +22,7 @@ timercount=0
 timevar=0
 StartTimerIDMain = sasl.createTimer ()
 sasl.startTimer(StartTimerIDMain)
-
+local xautolod=0
 
 function draw()
 	if StartTimerIDMain~=0 then
@@ -58,7 +60,7 @@ function onMouseLeave()
 end
 function onMouseDown(component, x, y, button, parentX, parentY)
 	if button == MB_LEFT then
-		sasl.commandOnce (openmainwindow)	
+		sasl.commandOnce(openmainwindow)	
 	end
 	return true
 end

@@ -125,3 +125,4 @@ Close
 WaterFix
 Slider height
 Show slider
+AutoLod Show FPS
