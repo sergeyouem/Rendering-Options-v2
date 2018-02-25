@@ -1,0 +1,127 @@
+Misc/Random
+Water&Reflection
+Shadows on scenery
+Number of objects
+Texture quality
+Clouds&atmo
+Visibility&Lights
+Plugin Settings
+Draw birds and deer in nice weather
+Draw fires and baloons
+Draw aircraft carriers and frigates
+Draw aurora Borealis
+Atmospheric scattering
+Draw volumetric fog
+Draw per pixel lightning
+Distance at which static planes are visible
+Static plane density
+Reflective water (main reflection)
+Draw FFT water (waves)
+Use 3D water (workaround, not ready now)
+Water reflection detail
+Waves amplitude
+Waves scale
+Water speed
+Amp1
+Amp2
+Amp3
+Amp4
+Scale1
+Scale2
+Scale3
+Scale4
+Noise speed
+Noise bias X
+Noise bias Y
+Cascading shadow exterior quality
+Cascading shadow interior quality
+Shadow texture size in the cockpit
+Clouds shadow texture size
+Shadow cockpit near adjust
+Shadow cockpit near proxy
+Shadow fade distance
+Show scenery shadows (trees, buildings)
+Disable any shadows in X-Plane
+Object density
+Traffic density
+Road density
+Forest density
+Forest inner
+Forest middle
+Forest outer
+Airport detail quality
+Extended DSFS
+Draw HDR
+Compress textures to save VRAM
+Use bump textures
+Use detail (aka gritty) textures of decals
+Ambient occlusion
+Clouds
+Atmosphere
+First resolution 3D
+Last resolution 3D
+Shadow lighten ratio
+Plot radius
+Overdraw control
+Ambient gain
+Diffuse gain
+White point
+Atmo scale raleigh
+Inscatter gane raleigh
+Min shadow angle
+Max shadow angle
+Max DSF visibility
+DSF fade ratio
+DSF cutover scale
+Min tone angle
+Max tone angle
+Tone rat.-good weather
+Tone rat.-foggy weather
+Tone rat.-hazy weather
+Tone rat.-snowy weather
+Tone rat.-o'cast weather
+Tone rat.-low visibility
+Tone rat.-high altitude
+Inscatter gain mie
+Scatter raleigh R
+Scatter raleigh G
+Scatter raleigh B
+Sky gain
+Visibility
+Lights
+Lights scale
+Lights distance
+Lights exponent
+Lights bloom
+Overall visibility
+LOD ratio
+Cars visibility
+Object visibility ratio
+Terrain objects (trees) visibility
+Terrain details visibility
+Fog visibility
+Scale near
+Scale far
+Distance near
+Distance far
+Exponent near
+Exponent far
+Bloom near
+Bloom far
+xEnviro enabled (automatic detection)
+Load saved preset at startup
+SAVE
+LOAD
+Plugin visibility
+AutoLod enabled
+AutoLod Preferences
+Minimum FPS
+Maximum FPS
+Timeout (msec, 100 .. 1000 recommended)
+Autocorrect gray horizon
+Language (WIP)
+Apply
+Close
+WaterFix
+Slider height
+Show slider

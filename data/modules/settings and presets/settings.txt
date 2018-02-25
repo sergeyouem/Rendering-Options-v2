@@ -1,0 +1,12 @@
+xEnviroenabled=0
+presettoload=1
+autolodenabled=0
+autograyhorizonenabled=0
+language=1
+autolodminfps=30
+autolodmaxfps=40
+autolodtimeout=500
+pluginvisibility=1
+autowaterfix=0
+sliderheight=50
+showslider=1
