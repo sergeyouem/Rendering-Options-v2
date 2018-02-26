@@ -1,30 +1,16 @@
 size = { 800, 480 }
 ro_sett=globalPropertyfa ( "pnv/ro/ro_sett", false )
-if get(ro_sett,20)==1 then
-	defineProperty("background_img",  sasl.gl.loadImage("pic\\main.png"))
-	defineProperty("mousepointer",  sasl.gl.loadImage("pic\\cursors.png"))
-	defineProperty("on_pic",  sasl.gl.loadImage("pic\\onbutton.png"))
-	defineProperty("off_pic",  sasl.gl.loadImage("pic\\offbutton.png"))
-	defineProperty("mid_pic",  sasl.gl.loadImage("pic\\midbutton.png"))
-	defineProperty("blue_pic",  sasl.gl.loadImage("pic\\blue.png"))
-	defineProperty("gray_pic",  sasl.gl.loadImage("pic\\gray.png"))
-	defineProperty("gray_sq_pic",  sasl.gl.loadImage("pic\\gray_sq.png"))
-	defineProperty("blue_sq_pic",  sasl.gl.loadImage("pic\\blue_sq.png"))
-	MainFont = sasl.gl.loadFont ( "fonts\\DejaVuSans.ttf" )
-	MainFont2 = sasl.gl.loadFont ( "fonts\\DejaVuSans-Bold.ttf" )
-else
-	defineProperty("background_img",  sasl.gl.loadImage("pic/main.png"))
-	defineProperty("mousepointer",  sasl.gl.loadImage("pic/cursors.png"))
-	defineProperty("on_pic",  sasl.gl.loadImage("pic/onbutton.png"))
-	defineProperty("off_pic",  sasl.gl.loadImage("pic/offbutton.png"))
-	defineProperty("mid_pic",  sasl.gl.loadImage("pic/midbutton.png"))
-	defineProperty("blue_pic",  sasl.gl.loadImage("pic/blue.png"))
-	defineProperty("gray_pic",  sasl.gl.loadImage("pic/gray.png"))
-	defineProperty("gray_sq_pic",  sasl.gl.loadImage("pic/gray_sq.png"))
-	defineProperty("blue_sq_pic",  sasl.gl.loadImage("pic/blue_sq.png"))
-	MainFont = sasl.gl.loadFont ( "fonts/DejaVuSans.ttf" )
-	MainFont2 = sasl.gl.loadFont ( "fonts/DejaVuSans-Bold.ttf" )
-end
+defineProperty("background_img",  sasl.gl.loadImage("pic/main.png"))
+defineProperty("mousepointer",  sasl.gl.loadImage("pic/cursors.png"))
+defineProperty("on_pic",  sasl.gl.loadImage("pic/onbutton.png"))
+defineProperty("off_pic",  sasl.gl.loadImage("pic/offbutton.png"))
+defineProperty("mid_pic",  sasl.gl.loadImage("pic/midbutton.png"))
+defineProperty("blue_pic",  sasl.gl.loadImage("pic/blue.png"))
+defineProperty("gray_pic",  sasl.gl.loadImage("pic/gray.png"))
+defineProperty("gray_sq_pic",  sasl.gl.loadImage("pic/gray_sq.png"))
+defineProperty("blue_sq_pic",  sasl.gl.loadImage("pic/blue_sq.png"))
+MainFont = sasl.gl.loadFont ( "fonts/DejaVuSans.ttf" )
+MainFont2 = sasl.gl.loadFont ( "fonts/DejaVuSans-Bold.ttf" )
 
 selected_tab = globalPropertyi("pnv/ro/selected_tab",false)
 ro_refs_values=globalPropertyfa ( "pnv/ro/ro_refs_values", false )
@@ -156,11 +142,7 @@ scale_far_ref=globalPropertyf("sim/private/controls/lights/scale_far") ---------
 scale_near_ref=globalPropertyf("sim/private/controls/lights/scale_near") ---------ENVIRO
 end
 function startlang()
-	if get(ro_sett,20)==1 then
-		langfilepath = moduleDirectory.."\\lang\\eng.txt"
-	else
-		langfilepath = moduleDirectory.."/lang/eng.txt"
-	end
+	langfilepath = moduleDirectory.."/lang/eng.txt"
 	langfile = io.open(langfilepath, "r")
 	
 	for i=1,150,1 do
@@ -701,11 +683,7 @@ function savesettings()
 																							----4-gray horizon(0,1) , 5-language(1-x), 6-autolod min fps, 7-autolod max fps
 																							----8-autolod timeout, 9-plugin visibility, 10-waterfix
 	local settings_table = {"xEnviroenabled","presettoload","autolodenabled","autograyhorizonenabled","language","autolodminfps","autolodmaxfps","autolodtimeout","pluginvisibility","autowaterfix","sliderheight","showslider","AutoLodShowFPS"}
-	if get(ro_sett,20)==1 then
-		settingsfilepath = moduleDirectory.."\\settings and presets\\settings.txt"
-	else
-		settingsfilepath = moduleDirectory.."/settings and presets/settings.txt"
-	end
+	settingsfilepath = moduleDirectory.."/settings and presets/settings.txt"
 	settingsfile = io.open(settingsfilepath, "w")
 	for ind=1,13,1 do
 		settingsfile:write(settings_table[ind].."="..round(get(ro_sett,ind),2), "\n")
@@ -806,11 +784,7 @@ function savepreset(pr_num)
 	val_to_save[89]="Exponent far="..round(get(exponent_far_ref),2)
 	val_to_save[90]="Bloom near="..get(bloom_near_ref)
 	val_to_save[91]="Bloom far="..get(bloom_far_ref)
-	if get(ro_sett,20)==1 then
-		settingsfilepath = moduleDirectory.."\\settings and presets\\preset_"..pr_num..".txt"
-	else
-		settingsfilepath = moduleDirectory.."/settings and presets/preset_"..pr_num..".txt"
-	end
+	settingsfilepath = moduleDirectory.."/settings and presets/preset_"..pr_num..".txt"
 	settingsfile = io.open(settingsfilepath, "w")
 	for ind=1,91,1 do
 		settingsfile:write(val_to_save[ind], "\n")
@@ -820,11 +794,7 @@ function savepreset(pr_num)
 end
 
 function load_preset(pr_num)
-	if get(ro_sett,20)==1 then
-		settingsfilepath = moduleDirectory.."\\settings and presets\\preset_"..pr_num..".txt"
-	else
-		settingsfilepath = moduleDirectory.."/settings and presets/preset_"..pr_num..".txt"
-	end
+	settingsfilepath = moduleDirectory.."/settings and presets/preset_"..pr_num..".txt"
 	existfile = isFileExists (settingsfilepath)
 	settingsfile = io.open(settingsfilepath, "r")
 	if existfile then

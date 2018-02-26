@@ -6,34 +6,18 @@ popupmain = sasl.createCommand ( "pnv/ro/popup" , "Popup main window" )
 local coeff=1
 local ii=1
 selected_tab = createGlobalPropertyi("pnv/ro/selected_tab",1,false,false)
-ro_sett=createGlobalPropertyfa ( "pnv/ro/ro_sett", {0,1,0,0,1,30,40,500,1,0,50,1,0,0,0,0,0,0,0,1} , false , false )----настройки 1-xEnviro enabled(0,1) , 2-load preset(0-6) , 3-autolod(0,1)
+ro_sett=createGlobalPropertyfa ( "pnv/ro/ro_sett", {0,1,0,0,1,30,40,500,1,0,50,1,0,0,0,0,0,0,0,0} , false , false )----настройки 1-xEnviro enabled(0,1) , 2-load preset(0-6) , 3-autolod(0,1)
 																							----4-gray horizon(0,1) , 5-language(1-x), 6-autolod min fps, 7-autolod max fps
 																							----8-autolod timeout, 9-plugin visibility, 10-waterfix, 11-slider height(%), 12-slider visibility, 13-autolod fps show
-																							---20 OS version (1-win,2-lin,3-mac)
+																							---
 ro_refs_values=createGlobalPropertyfa ( "pnv/ro/ro_refs_values", 150 , false , false )
 need_reload=createGlobalPropertyia ( "pnv/ro/need_reload", {0,0,0} , false , false )  ---- 1-button on-off; 2-reload_func; 3-trigger to reload once at start
 reload_scenery = sasl.findCommand("sim/operation/reload_scenery")
-local osName = sasl.getOS()
-if osName=="Windows" then
-	set(ro_sett,1,20)
-elseif osName=="Linux" then
-	set(ro_sett,2,20)
-elseif osName=="Mac" then
-	set(ro_sett,3,20)
-end
-if get(ro_sett,20)==1 then
-	MainFont = sasl.gl.loadFont ( "fonts\\DejaVuSans.ttf" )
-else
-	MainFont = sasl.gl.loadFont ( "fonts/DejaVuSans.ttf" )
-end
+MainFont = sasl.gl.loadFont ( "fonts/DejaVuSans.ttf" )
+
 
 function load_settings()
-	if get(ro_sett,20)==1 then
-		settingsfilepath = moduleDirectory.."\\settings and presets\\settings.txt"
-	else	
-		settingsfilepath = moduleDirectory.."/settings and presets/settings.txt"
-	end
-	
+	settingsfilepath = moduleDirectory.."/settings and presets/settings.txt"
 	settingsfile = io.open(settingsfilepath, "r")
 	local lines = settingsfile:read("*a")
 	
@@ -47,11 +31,7 @@ function load_settings()
 end
 function load_params()
 	if get(ro_sett,2)>0 and get(need_reload,3)==0 then
-		if get(ro_sett,20)==1 then
-			paramsfilepath = moduleDirectory.."\\settings and presets\\preset_"..get(ro_sett,2)..".txt"
-		else
-			paramsfilepath = moduleDirectory.."/settings and presets/preset_"..get(ro_sett,2)..".txt"
-		end
+		paramsfilepath = moduleDirectory.."/settings and presets/preset_"..get(ro_sett,2)..".txt"
 		paramsfile = io.open(paramsfilepath, "r")
 		existfile = isFileExists (paramsfilepath)
 		if existfile then
@@ -62,7 +42,6 @@ function load_params()
 			end
 			paramsfile:close()
 			ii=1
-			set(runway_follow,1)
 			set(draw_deer_birds_ref,get(ro_refs_values,1))
 			set(draw_fire_ball_ref,get(ro_refs_values,2))
 			set(draw_boats_ref,get(ro_refs_values,3))
@@ -93,7 +72,6 @@ end
 load_settings()
 
 function onSceneryLoaded()
-runway_follow=globalPropertyi("sim/private/controls/reno/sloped_runways")
 draw_deer_birds_ref=globalPropertyi("sim/private/controls/reno/draw_deer_birds")
 draw_fire_ball_ref=globalPropertyi("sim/private/controls/reno/draw_fire_ball")
 draw_boats_ref=globalPropertyi("sim/private/controls/reno/draw_boats")

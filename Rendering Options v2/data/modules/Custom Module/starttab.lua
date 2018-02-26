@@ -1,15 +1,9 @@
 screen_height=globalPropertyi("sim/graphics/view/window_height",false)
 screen_width=globalPropertyi("sim/graphics/view/window_width",false)
 ro_sett=globalPropertyfa ( "pnv/ro/ro_sett", false )
-if get(ro_sett,20)==1 then
-	MainFont = sasl.gl.loadFont ( "fonts\\DejaVuSans.ttf" )
-	defineProperty("slider_img",  sasl.gl.loadImage("pic\\slider.png"))
-	defineProperty("blue_img",  sasl.gl.loadImage("pic\\blue.png"))
-else
-	MainFont = sasl.gl.loadFont ( "fonts/DejaVuSans.ttf" )
-	defineProperty("slider_img",  sasl.gl.loadImage("pic/slider.png"))
-	defineProperty("blue_img",  sasl.gl.loadImage("pic/blue.png"))
-end
+MainFont = sasl.gl.loadFont ( "fonts/DejaVuSans.ttf" )
+defineProperty("slider_img",  sasl.gl.loadImage("pic/slider.png"))
+defineProperty("blue_img",  sasl.gl.loadImage("pic/blue.png"))
 a=0
 b=0
 current_height=get(screen_height)
