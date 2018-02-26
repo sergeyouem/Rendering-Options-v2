@@ -6,7 +6,7 @@ popupmain = sasl.createCommand ( "pnv/ro/popup" , "Popup main window" )
 local coeff=1
 local ii=1
 selected_tab = createGlobalPropertyi("pnv/ro/selected_tab",1,false,false)
-ro_sett=createGlobalPropertyfa ( "pnv/ro/ro_sett", {0,1,0,0,1,30,40,500,1,0,50,1,0,1,0,0,0,0,0,0} , false , false )----настройки 1-xEnviro enabled(0,1) , 2-load preset(0-6) , 3-autolod(0,1)
+ro_sett=createGlobalPropertyfa ( "pnv/ro/ro_sett", {0,1,0,0,1,30,40,500,1,0,50,1,0,0,0,0,0,0,0,1} , false , false )----настройки 1-xEnviro enabled(0,1) , 2-load preset(0-6) , 3-autolod(0,1)
 																							----4-gray horizon(0,1) , 5-language(1-x), 6-autolod min fps, 7-autolod max fps
 																							----8-autolod timeout, 9-plugin visibility, 10-waterfix, 11-slider height(%), 12-slider visibility, 13-autolod fps show
 																							---20 OS version (1-win,2-lin,3-mac)
@@ -21,7 +21,7 @@ elseif osName=="Linux" then
 elseif osName=="Mac" then
 	set(ro_sett,3,20)
 end
-if get(ro_sett,13)==1 then
+if get(ro_sett,20)==1 then
 	MainFont = sasl.gl.loadFont ( "fonts\\DejaVuSans.ttf" )
 else
 	MainFont = sasl.gl.loadFont ( "fonts/DejaVuSans.ttf" )
