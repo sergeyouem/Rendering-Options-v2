@@ -1747,12 +1747,12 @@ function onMouseWheel ( component , x , y , button , parentX , parentY, value )
 			savesettings()
 		elseif x>400 and x<450 and y>300 and y<315 then
 			set(ro_sett,get(ro_sett,11)+value,11)
-			slidetab.position = {get(screen_width)-10, get(screen_height)*(get(ro_sett,11)/100), 110, 35}
 			if get(ro_sett,11)<0 then
 				set(ro_sett,0,11)
-			elseif get(ro_sett,11)>95 then
-				set(ro_sett,95,11)
+			elseif get(ro_sett,11)>85 then
+				set(ro_sett,85,11)
 			end
+			slidetab.position = {get(screen_width)-10, get(screen_height)*(get(ro_sett,11)/100), 110, 35}
 			savesettings()
 		end
 	end

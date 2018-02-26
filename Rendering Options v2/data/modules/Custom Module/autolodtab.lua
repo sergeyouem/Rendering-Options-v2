@@ -66,7 +66,7 @@ function onMouseDown(component, x, y, button, parentX, parentY)
 end
 function update()
 	if (current_height~=get(screen_height)) or (current_width~=get(screen_width)) then
-		slidetab.position = {get(screen_width)-10-a, get(screen_height)*(get(ro_sett,11)/100)+45, 110, 35}
+		autolodtab.position = {get(screen_width)-10, get(screen_height)*(get(ro_sett,11)/100)+45, 110, 35}
 		current_height=get(screen_height)
 		current_width=get(screen_width)
 	end
