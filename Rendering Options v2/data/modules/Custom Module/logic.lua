@@ -210,7 +210,7 @@ function need_reload_func()
 end
 
 function loading_preset_at_start(pr_num)
-	if get(ro_sett,13)==1 then
+	if get(ro_sett,20)==1 then
 		settingsfilepath = moduleDirectory.."\\settings and presets\\preset_"..pr_num..".txt"
 	else
 		settingsfilepath = moduleDirectory.."/settings and presets/preset_"..pr_num..".txt"

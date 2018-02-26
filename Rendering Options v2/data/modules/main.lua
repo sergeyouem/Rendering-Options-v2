@@ -28,7 +28,7 @@ else
 end
 
 function load_settings()
-	if get(ro_sett,13)==1 then
+	if get(ro_sett,20)==1 then
 		settingsfilepath = moduleDirectory.."\\settings and presets\\settings.txt"
 	else	
 		settingsfilepath = moduleDirectory.."/settings and presets/settings.txt"
@@ -47,7 +47,7 @@ function load_settings()
 end
 function load_params()
 	if get(ro_sett,2)>0 and get(need_reload,3)==0 then
-		if get(ro_sett,13)==1 then
+		if get(ro_sett,20)==1 then
 			paramsfilepath = moduleDirectory.."\\settings and presets\\preset_"..get(ro_sett,2)..".txt"
 		else
 			paramsfilepath = moduleDirectory.."/settings and presets/preset_"..get(ro_sett,2)..".txt"

@@ -1,6 +1,6 @@
 size = { 800, 480 }
 ro_sett=globalPropertyfa ( "pnv/ro/ro_sett", false )
-if get(ro_sett,13)==1 then
+if get(ro_sett,20)==1 then
 	defineProperty("background_img",  sasl.gl.loadImage("pic\\main.png"))
 	defineProperty("mousepointer",  sasl.gl.loadImage("pic\\cursors.png"))
 	defineProperty("on_pic",  sasl.gl.loadImage("pic\\onbutton.png"))
@@ -156,7 +156,7 @@ scale_far_ref=globalPropertyf("sim/private/controls/lights/scale_far") ---------
 scale_near_ref=globalPropertyf("sim/private/controls/lights/scale_near") ---------ENVIRO
 end
 function startlang()
-	if get(ro_sett,13)==1 then
+	if get(ro_sett,20)==1 then
 		langfilepath = moduleDirectory.."\\lang\\eng.txt"
 	else
 		langfilepath = moduleDirectory.."/lang/eng.txt"
@@ -701,7 +701,7 @@ function savesettings()
 																							----4-gray horizon(0,1) , 5-language(1-x), 6-autolod min fps, 7-autolod max fps
 																							----8-autolod timeout, 9-plugin visibility, 10-waterfix
 	local settings_table = {"xEnviroenabled","presettoload","autolodenabled","autograyhorizonenabled","language","autolodminfps","autolodmaxfps","autolodtimeout","pluginvisibility","autowaterfix","sliderheight","showslider","AutoLodShowFPS"}
-	if get(ro_sett,13)==1 then
+	if get(ro_sett,20)==1 then
 		settingsfilepath = moduleDirectory.."\\settings and presets\\settings.txt"
 	else
 		settingsfilepath = moduleDirectory.."/settings and presets/settings.txt"
@@ -806,7 +806,7 @@ function savepreset(pr_num)
 	val_to_save[89]="Exponent far="..round(get(exponent_far_ref),2)
 	val_to_save[90]="Bloom near="..get(bloom_near_ref)
 	val_to_save[91]="Bloom far="..get(bloom_far_ref)
-	if get(ro_sett,13)==1 then
+	if get(ro_sett,20)==1 then
 		settingsfilepath = moduleDirectory.."\\settings and presets\\preset_"..pr_num..".txt"
 	else
 		settingsfilepath = moduleDirectory.."/settings and presets/preset_"..pr_num..".txt"
@@ -820,7 +820,7 @@ function savepreset(pr_num)
 end
 
 function load_preset(pr_num)
-	if get(ro_sett,13)==1 then
+	if get(ro_sett,20)==1 then
 		settingsfilepath = moduleDirectory.."\\settings and presets\\preset_"..pr_num..".txt"
 	else
 		settingsfilepath = moduleDirectory.."/settings and presets/preset_"..pr_num..".txt"
